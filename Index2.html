@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*Задание2
+    Созайдте страницу галерею. На странице должен выводиться 
+    список картинок preview небольших размеров. При нажатии на
+    каждое изображение превью должно отображаться большое изображение
+    */
+    </script>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var cats = document.getElementsByTagName("img");
+            for(var i = 0; i < cats.length; i++){
+                cats[i].addEventListener("mouseover",function(){
+                    this.style.width = 400+"px";
+                })
+                cats[i].addEventListener("mouseout",function(){
+                    this.style.width = 300+"px";
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="img/cat1.jpg" alt="">
+        <img src="img/cat2.jpg" alt="">
+        <img src="img/cat3.jpg" alt="">
+    </div>
+</body>
+</html>

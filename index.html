@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*Задание1
+    создайте страницу с 3 кнопками, при нажатии на каждую из 
+    кнопок должно меняться изображение, выводимое на странице.
+    
+    Задание2
+    Созайдте страницу галерею. На странице должен выводиться 
+    список картинок preview небольших размеров. При нажатии на
+    каждое изображение превью должно отображаться большое изобра
+    жение
+    */
+            // var cat1 = document.getElementById("cat1");
+            // var cat2 = document.getElementById("cat2");
+            // var cat3 = document.getElementById("cat3");    
+    </script>
+    <style>
+        img{
+            width: 400px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var cats = ["img/cat1.jpg", "img/cat2.jpg", "img/cat3.jpg"];
+            var btns = document.getElementsByClassName("btn")
+            var catLogo = document.getElementById("catLogo");
+            var count = 0;
+            for(var i = 0; i < btns.length; i++){
+                btns[i].addEventListener("click", function(){
+                    catLogo.src = cats[i];
+                    console.log(i);//Почему I тут всегда 3? хотя цикл делает проблег от 0 до 2 , откуда 3???
+                    
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="img/cat1.jpg" alt="" id="catLogo">
+</br>
+    <input type="button" value="Cat1" id="cat1" class="btn">
+    <input type="button" value="Cat2" id="cat2" class="btn">
+    <input type="button" value="Cat3" id="cat3" class="btn">
+</body>
+</html>
