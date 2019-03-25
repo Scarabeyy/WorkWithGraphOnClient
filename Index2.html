@@ -32,11 +32,15 @@
         window.onload = function(){
             var cats = document.getElementsByTagName("img");
             for(var i = 0; i < cats.length; i++){
-                cats[i].addEventListener("click",function(){
-                    if(this.className == "class1"){
-                        this.className = "class2";
+                cats[i].addEventListener("click", function(){
+                    if(this.classList.contains("class1")){
+                        this.classList.add = "class2";
                     }
-                    else {this.className = "class1";}
+                    else {
+                        console.log(this.classList);
+                        console.log(this);//почему не происходит присвоение класса через classList add?
+                        this.classList.remove = "class2";
+                        this.classList.add = "class1";}
                 })
             }
         }
@@ -44,9 +48,9 @@
 </head>
 <body>
     <div>
-        <img src="img/cat1.jpg" alt="">
-        <img src="img/cat2.jpg" alt="">
-        <img src="img/cat3.jpg" alt="">
+        <img src="img/cat1.jpg" alt="" >
+        <img src="img/cat2.jpg" alt="" >
+        <img src="img/cat3.jpg" alt="" >
     </div>
 </body>
 </html>
