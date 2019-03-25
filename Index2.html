@@ -34,13 +34,14 @@
             for(var i = 0; i < cats.length; i++){
                 cats[i].addEventListener("click", function(){
                     if(this.classList.contains("class1")){
-                        this.classList.add = "class2";
+                        this.classList.remove("class1")
+                        this.classList.add("class2");
                     }
                     else {
                         console.log(this.classList);
                         console.log(this);//почему не происходит присвоение класса через classList add?
-                        this.classList.remove = "class2";
-                        this.classList.add = "class1";}
+                        this.classList.remove("class2");
+                        this.classList.add("class1");}
                 })
             }
         }
