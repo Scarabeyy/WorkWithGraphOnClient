@@ -17,16 +17,26 @@
             width: 300px;
             height: 300px;
         }
+        .class1{
+            width: 400px;
+            height: 400px;
+            border: 2px solid red;
+        }
+        .class2{
+            width: 300px;
+            height: 300px;
+            border: 2px solid green; 
+        }
     </style>
     <script>
         window.onload = function(){
             var cats = document.getElementsByTagName("img");
             for(var i = 0; i < cats.length; i++){
-                cats[i].addEventListener("mouseover",function(){
-                    this.style.width = 400+"px";
-                })
-                cats[i].addEventListener("mouseout",function(){
-                    this.style.width = 300+"px";
+                cats[i].addEventListener("click",function(){
+                    if(this.className == "class1"){
+                        this.className = "class2";
+                    }
+                    else {this.className = "class1";}
                 })
             }
         }

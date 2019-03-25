@@ -31,13 +31,11 @@
             var btns = document.getElementsByClassName("btn")
             var catLogo = document.getElementById("catLogo");
             var count = 0;
-            for(var i = 0; i < btns.length; i++){
-                btns[i].addEventListener("click", function(){
-                    catLogo.src = cats[i];
-                    console.log(i);//Почему I тут всегда 3? хотя цикл делает проблег от 0 до 2 , откуда 3???
-                    
-                })
-            }
+            btns.forEach((function(btn, i) {
+                btn.addEventListener('click', function() {
+                catLogo.src = cats[i];
+                    });
+            }));
         }
     </script>
 </head>
