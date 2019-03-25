@@ -28,13 +28,12 @@
     <script>
         window.onload = function(){
             var cats = ["img/cat1.jpg", "img/cat2.jpg", "img/cat3.jpg"];
-            var btns = document.getElementsByClassName("btn")
+            var btns = document.querySelectorAll(".btn");
             var catLogo = document.getElementById("catLogo");
-            var count = 0;
             btns.forEach((function(btn, i) {
                 btn.addEventListener('click', function() {
-                catLogo.src = cats[i];
-                    });
+                    catLogo.src = cats[i];
+                });
             }));
         }
     </script>
